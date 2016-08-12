@@ -1,0 +1,45 @@
+{% extends 'quiz/base.html' %}
+
+{% block body-content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+          <h1> Question {{ question_number }} </h1>
+          <h3> {{ question }} </h3>
+      </div>
+    </div>
+
+    <div class = "row">
+      {% for answer in answers %}
+        <div class = "col-md-6 answer">
+          <a href="{% url 'question' pk=showing clicked=forloop.counter0 %}">
+            <img src={{ answer.img_url }}></img>
+            <p> {{ answer.text }}
+              {% if answer.selected %}
+                {% if answer.is_correct %}
+                  <span class="glyphicon glyphicon-ok"></span>
+                {% else %}
+                  <span class="glyphicon glyphicon-remove"></span>
+                {% endif %}
+              {% endif %}
+            </p>
+
+
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-1 pull-right">
+
+        <a href="{% url 'question' pk=next %}" class="btn btn-next btn-lg">
+          Next
+          <span class="glyphicon glyphicon-arrow-right"></span>
+        </a>
+
+      </div>
+
+  </div>
+  {% endblock %}

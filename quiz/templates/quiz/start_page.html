@@ -1,0 +1,23 @@
+{% extends 'quiz/base.html' %}
+
+{% block body-content %}
+  <div class="container container-table">
+    <div class="row vertical-center-row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="row">
+          <h1> Ten questions about cats </h1>
+        </div>
+        <div class="row">
+          <div class="col-md-1 pull-right">
+
+            <a href="{% url 'question' pk=0  %}" class="btn btn-next btn-lg">
+              Start
+              <span class="glyphicon glyphicon-arrow-right"></span>
+            </a>
+
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}

@@ -1,0 +1,38 @@
+h1 {
+    color: #FC7000;
+    text-align: center;
+}
+
+.container-table {
+    height: 100%;
+    display: table;
+    vertical-align: middle;
+}
+
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.btn-next{
+  color: #FFFFFF;
+  background-color: #FC7000;
+}
+
+.answer{
+  padding-top: 50px;
+}
+
+.answer img {
+  height: 150px;
+}
+
+.glyphicon-ok{
+  font-size: 1.5em;
+  color: green
+}
+
+.glyphicon-remove{
+  font-size: 1.5em;
+  color: red
+}
